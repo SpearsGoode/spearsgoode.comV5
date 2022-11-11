@@ -8,6 +8,7 @@
   <meta name="description" content=""> <!--FIXME-->
   <title>SpearsGoode.com - Project Portfolio</title>
   <link rel="shortcut icon" type="image/svg" href="./img/Logo.svg">
+  <link href='./node_modules/bootstrap/dist/css/bootstrap.min.css' type='text/css' rel='stylesheet'>
   <link href='./css/main.css' type='text/css' rel='stylesheet'>
 </head>
 
@@ -23,6 +24,7 @@
   <footer>
   </footer>
 
+  <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
