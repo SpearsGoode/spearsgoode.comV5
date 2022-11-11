@@ -17,6 +17,7 @@
   </nav>
 
   <div class="content">
+    <h1> verify </h1>
   </div>
 
   <footer>
