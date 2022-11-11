@@ -12,12 +12,12 @@
   <link href='./css/main.css' type='text/css' rel='stylesheet'>
 </head>
 
-<body>
+<body class="container-fluid">
 
   <nav>
   </nav>
 
-  <div class="content">
+  <div class="container-lg bg-dark">
     <h1> verify </h1>
   </div>
 
