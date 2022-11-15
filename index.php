@@ -53,10 +53,11 @@
 
   <div class="container-lg">
     <div class="card">
-      <img src="..." class="card-img-top" alt="...">
-
-      <div class="card-body">
+      <div class="card-header">
         <h5 class="card-title">Title <span class="badge bg-info float-end">Completed: 0000</span></h5>
+      </div>
+      <div class="card-body">
+
         <img src="..." class="img-fluid" alt="...">
         <p class="card-text">Short Description</p>
         <a href="#" class="btn btn-success">More Info</a>
