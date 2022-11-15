@@ -17,7 +17,7 @@
   <nav class="navbar navbar-dark bg-dark sticky-top">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">
-        <img src="./img/Logo.svg" alt="Spears Goode Logo" width="50" height="50">
+        <img src="./img/SGlogoV2.svg" alt="Spears Goode Logo" width="50" height="50">
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
         <span class="navbar-toggler-icon"></span>
@@ -51,8 +51,18 @@
   </nav>
 
 
-  <div class="container-lg bg-light">
-    <h1> verify </h1>
+  <div class="container-lg">
+    <div class="card">
+      <img src="..." class="card-img-top" alt="...">
+
+      <div class="card-body">
+        <h5 class="card-title">Title <span class="badge bg-info float-end">Completed: 0000</span></h5>
+        <img src="..." class="img-fluid" alt="...">
+        <p class="card-text">Short Description</p>
+        <a href="#" class="btn btn-success">More Info</a>
+        <a href="#" class="btn btn-success float-end">Visit Site</a>
+      </div>
+    </div>
   </div>
 
   <footer>
