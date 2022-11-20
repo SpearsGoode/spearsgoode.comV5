@@ -2,7 +2,7 @@
 
 <?php
 $projectData = array(
-    array("title"=>"Abstract-Artwork.com", "date"=>"Completed: April 2019", "img"=>"FIXME", "link"=>"https://archive.spearsgoode.com/abstract-artwork.com",
+    array("title"=>"Abstract-Artwork.com", "date"=>"Completed: April 2019", "img"=>"FIXME", "alt"=>"FIXME", "link"=>"https://archive.spearsgoode.com/abstract-artwork.com",
           "intro"=>"Haven for Abstract Artists. View abstract artwork from around the globe, meet other abstract artists, and find out what inspires them.",
           "info"=>"FIXME"),
     array("title"=>"Armada DAO | Ape Armada", "date"=>"Discontinued: October 2022", "img"=>"FIXME", "link"=>"FIXME",
@@ -14,7 +14,7 @@ $projectData = array(
     array("title"=>"SpearsGoode.com", "date"=>"Ongoing", "img"=>"FIXME", "link"=>"archive.spearsgoode.com/spearsgoode.com",
           "intro"=>"FIXME",
           "info"=>"FIXME"),
-    array("title"=>"cfunHub", "date"=>"Completed: October 2019", "img"=>"FIXME", "link"=>"archive.spearsgoode.com/cFunHub",
+    array("title"=>"cfunHub", "date"=>"Completed: October 2019", "img"=>"FIXME", "alt"=>"FIXME", "link"=>"archive.spearsgoode.com/cFunHub",
           "intro"=>"FIXME",
           "info"=>"FIXME")
 );
