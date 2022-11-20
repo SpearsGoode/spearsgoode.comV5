@@ -1,3 +1,4 @@
+<?php require './projectData.php'; ?>
 
 <!DOCTYPE html>
 <html  lang="en">
@@ -29,18 +30,15 @@
         </div>
         <div class="offcanvas-body">
           <ul class="navbar-nav nav-fill justify-content-end flex-grow-1 pe-3">
-            <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="#">Abstract-Artwork.com</a> <!--FIXME-->
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Armada DAO | Ape Armada</a> <!--FIXME-->
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">aHODLm Indicator</a> <!--FIXME-->
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">SpearsGoode.com</a> <!--FIXME-->
-            </li>
+
+            <?php
+              foreach ($projectData as $proj) {
+                echo "<li class=\"nav-item\">";
+                  echo "<a class=\"nav-link\" aria-current=\"page\" href=\"#" . $proj['title'] . "\">" . $proj['title'] . "</a>";
+                echo "</li>";
+              }
+            ?>
+
             <li class="nav-item">
               <a class="nav-link" href="#">Contact</a> <!--FIXME-->
             </li>
