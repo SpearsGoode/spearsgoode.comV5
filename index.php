@@ -15,6 +15,7 @@
 
 <body class="container-fluid bg-dark">
 
+<!-- NAVIGATION -->
   <nav class="navbar navbar-dark bg-dark sticky-top">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">
@@ -48,38 +49,25 @@
     </div>
   </nav>
 
-
+<!-- PROJECT CARDS -->
   <div class="container-lg">
-
-  <?php
-    foreach ($projectData as $proj) {
-      echo "<div class=\"card\">";
-        echo "<div class=\"card-header\">";
-          echo "<h5 class=\"card-title\">" . $proj['title'] . "<span class=\"badge bg-info float-end\">" . $proj['date'] . "</span></h5>";
+    <?php
+      foreach ($projectData as $proj) {
+        echo "<div class=\"card mt-2 shadow\" id=\"" . $proj['title'] . "\">";
+          echo "<div class=\"card-header\">";
+            echo "<h5 class=\"card-title\">" . $proj['title'] . "<span class=\"badge bg-info float-end\">" . $proj['date'] . "</span></h5>";
+          echo "</div>";
+          echo "<div class=\"card-body\">";
+            echo "<img src=\"./img/" . $proj['img'] . "\" class=\"img-fluid\" alt=\"" . $proj['alt'] . "\">";
+            echo "<p class=\"card-text\">" . $proj['intro'] . "</p>";
+            echo "<div class=\"card-footer pb-0\">";
+              echo "<a href=\"#\" class=\"btn btn-success\">More Info</a>"; //FIXME
+              echo "<a href=\"" . $proj['link'] . "\" class=\"btn btn-success float-end\">Visit Site</a>";
+            echo "</div>";
+          echo "</div>";
         echo "</div>";
-        echo "<div class=\"card-body\">";
-          echo "<img src=\"" . $proj['img'] . "\" class=\"img-fluid\" alt=\"" . $proj['alt'] . "\">";
-          echo "<p class=\"card-text\">" . $proj['intro'] . "</p>";
-          echo "<a href=\"#\" class=\"btn btn-success\">More Info</a>"; //FIXME
-          echo "<a href=\"" . $proj['link'] . "\" class=\"btn btn-success float-end\">Visit Site</a>";
-        echo "</div>";
-      echo "</div>";
-    }
-  ?>
-
-<!--     <div class="card"> -->
-<!--       <div class="card-header"> -->
-<!--         <h5 class="card-title">Title <span class="badge bg-info float-end">Completed: 0000</span></h5> -->
-<!--       </div> -->
-<!--       <div class="card-body"> -->
-
-<!--         <img src="..." class="img-fluid" alt="..."> -->
-<!--         <p class="card-text">Short Description</p> -->
-<!--         <a href="#" class="btn btn-success">More Info</a> -->
-<!--         <a href="#" class="btn btn-success float-end">Visit Site</a> -->
-<!--       </div> -->
-<!--     </div> -->
-
+      }
+    ?>
   </div>
 
   <footer>
