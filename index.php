@@ -53,15 +53,17 @@
   <div class="container-lg">
     <?php
       foreach ($projectData as $proj) {
-        echo "<div class=\"card mt-2\" id=\"" . $proj['title'] . "\">";
+        echo "<div class=\"card mt-2 shadow\" id=\"" . $proj['title'] . "\">";
           echo "<div class=\"card-header\">";
             echo "<h5 class=\"card-title\">" . $proj['title'] . "<span class=\"badge bg-info float-end\">" . $proj['date'] . "</span></h5>";
           echo "</div>";
           echo "<div class=\"card-body\">";
-            echo "<img src=\"" . $proj['img'] . "\" class=\"img-fluid\" alt=\"" . $proj['alt'] . "\">";
+            echo "<img src=\"./img/" . $proj['img'] . "\" class=\"img-fluid\" alt=\"" . $proj['alt'] . "\">";
             echo "<p class=\"card-text\">" . $proj['intro'] . "</p>";
-            echo "<a href=\"#\" class=\"btn btn-success\">More Info</a>"; //FIXME
-            echo "<a href=\"" . $proj['link'] . "\" class=\"btn btn-success float-end\">Visit Site</a>";
+            echo "<div class=\"card-footer pb-0\">";
+              echo "<a href=\"#\" class=\"btn btn-success\">More Info</a>"; //FIXME
+              echo "<a href=\"" . $proj['link'] . "\" class=\"btn btn-success float-end\">Visit Site</a>";
+            echo "</div>";
           echo "</div>";
         echo "</div>";
       }
