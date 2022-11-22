@@ -62,7 +62,9 @@
             echo "<p class=\"card-text\">" . $proj['intro'] . "</p>";
             echo "<div class=\"card-footer pb-0\">";
               echo "<a href=\"#\" class=\"btn btn-success\">More Info</a>"; //FIXME
-              echo "<a href=\"" . $proj['link'] . "\" class=\"btn btn-success float-end\">Visit Site</a>";
+              if ($proj['link'] != "none") {
+                echo "<a href=\"" . $proj['link'] . "\" class=\"btn btn-success float-end\">Visit Site</a>";
+              }
             echo "</div>";
           echo "</div>";
         echo "</div>";
