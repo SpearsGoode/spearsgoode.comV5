@@ -1,24 +1,41 @@
-
-
 <?php
 $projectData = array(
-    array("title"=>"Abstract-Artwork.com", "date"=>"Completed: April 2019", "img"=>"abstract-artwork.jpg", "alt"=>"FIXME", "link"=>"https://archive.spearsgoode.com/abstract-artwork.com",
+    array("title"=>"Abstract-Artwork.com",
+          "date"=>"Completed: April 2019",
+          "img"=>"abstract-artwork.jpg",
+          "alt"=>"Abstract-Artwork.com home page screenshot",
+          "link"=>"https://archive.spearsgoode.com/abstract-artwork.com",
           "intro"=>"Haven for Abstract Artists. View abstract artwork from around the globe, meet other abstract artists, and find out what inspires them.",
           "info"=>"FIXME"),
-    array("title"=>"Armada DAO | Ape Armada", "date"=>"Discontinued: October 2022", "img"=>"FIXME", "link"=>"FIXME",
+    array("title"=>"Armada DAO | Ape Armada",
+          "date"=>"Discontinued: October 2022",
+          "img"=>"FIXME",
+          "alt"=>"FIXME",
+          "link"=>"none",
           "intro"=>"A Play to Earn, Multiplayer, First Person Shooter designed to tackle significant problems concerning the design of current generation Play to Earn (P2E) games",
           "info"=>"FIXME"),
-    array("title"=>"aHODLm Indicator", "date"=>"Shelved: August 2020", "img"=>"aHODLm.jpg", "link"=>"none",
+    array("title"=>"aHODLm Indicator",
+          "date"=>"Shelved: August 2020",
+          "img"=>"aHODLm.jpg",
+          "alt"=>"FIXME",
+          "link"=>"none",
+          "intro"=>"Analyzes price movement to detect likelihood of significant movements. This is presented visually using different colors. At points of high risk it automatically takes profit and at points of low risk it automatically increases the position size. Since its inception it has proven its ability to swing trade effectively with minimal oversight.",
+          "info"=>"FIXME"),
+    array("title"=>"SpearsGoode.com",
+          "date"=>"Ongoing",
+          "img"=>"FIXME",
+          "alt"=>"FIXME",
+          "link"=>"archive.spearsgoode.com/spearsgoode.com",
           "intro"=>"FIXME",
           "info"=>"FIXME"),
-    array("title"=>"SpearsGoode.com", "date"=>"Ongoing", "img"=>"FIXME", "link"=>"archive.spearsgoode.com/spearsgoode.com",
-          "intro"=>"FIXME",
-          "info"=>"FIXME"),
-    array("title"=>"cfunHub", "date"=>"Completed: October 2019", "img"=>"FIXME", "alt"=>"FIXME", "link"=>"archive.spearsgoode.com/cFunHub",
+    array("title"=>"cfunHub",
+          "date"=>"Completed: October 2019",
+          "img"=>"FIXME", "alt"=>"FIXME",
+          "alt"=>"FIXME",
+          "link"=>"archive.spearsgoode.com/cFunHub",
           "intro"=>"FIXME",
           "info"=>"FIXME")
 );
-
 // Entry Template:
-// array("title"=>"", "date"=>"", "img"=>"", "link"=>"", "intro"=>"", "info"=>"")
+// array("title"=>"", "date"=>"", "img"=>"", "alt"=>"FIXME", "link"=>"", "intro"=>"", "info"=>"")
 ?>
