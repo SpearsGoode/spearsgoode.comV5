@@ -55,9 +55,12 @@
   <div class="container-lg">
     <?php
       foreach ($projectData as $proj) {
-        echo "<div class=\"card mt-2 shadow\" id=\"" . $proj['title'] . "\">";
+        echo "<div class=\"card mt-2 shadow opacity-75\" id=\"" . $proj['title'] . "\">";
           echo "<div class=\"card-header\">";
-            echo "<h5 class=\"card-title\">" . $proj['title'] . "<span class=\"badge bg-info float-end\">" . $proj['date'] . "</span></h5>";
+            echo "<div class \"list-inline\">";
+              echo "<h4 class=\"card-title list-inline-item\">" . $proj['title'] . "</h4>";
+              echo "<span class=\"badge bg-info float-end list-inline-item\">" . $proj['date'] . "</span>";
+            echo "</div>";
           echo "</div>";
           echo "<div class=\"card-body\">";
             echo "<img src=\"./img/" . $proj['img'] . "\" class=\"img-fluid\" alt=\"" . $proj['alt'] . "\">";
@@ -78,10 +81,10 @@
   <?php
     foreach ($projectData as $proj) {
       echo "<div class=\"modal fade\" id=\"" . $proj['tag'] . "Modal\" tabindex=\"-1\" aria-labelledby=\"" . $proj['tag'] . "ModalLabel\" aria-hidden=\"true\">";
-        echo "<div class=\"modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl\">";
+        echo "<div class=\"modal-dialog modal-dialog-centered modal-dialog-scrollable modal-fullscreen-lg-down modal-xl\">";
           echo "<div class=\"modal-content\">";
             echo "<div class=\"modal-header\">";
-              echo "<h5 class=\"modal-title fs-5\" id=\"" . $proj['tag'] . "ModalLabel\">" . $proj['title'] . "</h5>";
+              echo "<h5 class=\"modal-title\" id=\"" . $proj['tag'] . "ModalLabel\">" . $proj['title'] . "</h5>";
               echo "<button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"modal\" aria-label=\"Close\"></button>";
             echo "</div>";
             echo "<div class=\"modal-body\">";
