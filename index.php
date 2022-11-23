@@ -49,6 +49,8 @@
     </div>
   </nav>
 
+<!-- INTRO -->
+
 <!-- PROJECT CARDS -->
   <div class="container-lg">
     <?php
@@ -62,7 +64,7 @@
             echo "<p class=\"card-text\">" . $proj['intro'] . "</p>";
           echo "</div>";
           echo "<div class=\"card-footer\">";
-            echo "<button type=\"button\" class=\"btn btn-success\" data-bs-toggle=\"modal\" data-bs-target=\"#" . $proj['tag'] . "Modal\"> More Info </button>"; //FIXME
+            echo "<button type=\"button\" class=\"btn btn-success\" data-bs-toggle=\"modal\" data-bs-target=\"#" . $proj['tag'] . "Modal\"> More Info </button>";
             if ($proj['link'] != "none") {
               echo "<a href=\"" . $proj['link'] . "\" class=\"btn btn-success float-end\">Visit Site</a>";
             }
@@ -76,14 +78,14 @@
   <?php
     foreach ($projectData as $proj) {
       echo "<div class=\"modal fade\" id=\"" . $proj['tag'] . "Modal\" tabindex=\"-1\" aria-labelledby=\"" . $proj['tag'] . "ModalLabel\" aria-hidden=\"true\">";
-        echo "<div class=\"modal-dialog\">";
+        echo "<div class=\"modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl\">";
           echo "<div class=\"modal-content\">";
             echo "<div class=\"modal-header\">";
-              echo "<h1 class=\"modal-title fs-5\" id=\"" . $proj['tag'] . "ModalLabel\">Modal title</h1>";
+              echo "<h5 class=\"modal-title fs-5\" id=\"" . $proj['tag'] . "ModalLabel\">" . $proj['title'] . "</h5>";
               echo "<button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"modal\" aria-label=\"Close\"></button>";
             echo "</div>";
             echo "<div class=\"modal-body\">";
-              echo "...";
+              echo $proj['info']; //FIXME
             echo "</div>";
             echo "<div class=\"modal-footer\">";
               echo "<button type=\"button\" class=\"btn btn-secondary\" data-bs-dismiss=\"modal\">Close</button>";
@@ -93,6 +95,8 @@
       echo "</div>";
     }
   ?>
+
+<!-- CONTACT -->
 
   <footer>
   </footer>

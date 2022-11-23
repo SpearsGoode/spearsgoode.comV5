@@ -1,0 +1,4 @@
+<div class="d-grid gap-2">
+    <a class="btn btn-dark mb-2" href="./modalContent/ApeArmadaWP.pdf" target="_blank">Open PDF</a>
+</div>
+<embed src="./modalContent/ApeArmadaWP.pdf" frameborder="0" width="100%" height="800px">
