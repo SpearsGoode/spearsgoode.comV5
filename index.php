@@ -49,6 +49,8 @@
     </div>
   </nav>
 
+<!-- INTRO -->
+
 <!-- PROJECT CARDS -->
   <div class="container-lg">
     <?php
@@ -79,7 +81,7 @@
         echo "<div class=\"modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl\">";
           echo "<div class=\"modal-content\">";
             echo "<div class=\"modal-header\">";
-              echo "<h1 class=\"modal-title fs-5\" id=\"" . $proj['tag'] . "ModalLabel\">" . $proj['title'] . "</h1>";
+              echo "<h5 class=\"modal-title fs-5\" id=\"" . $proj['tag'] . "ModalLabel\">" . $proj['title'] . "</h5>";
               echo "<button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"modal\" aria-label=\"Close\"></button>";
             echo "</div>";
             echo "<div class=\"modal-body\">";
@@ -93,6 +95,8 @@
       echo "</div>";
     }
   ?>
+
+<!-- CONTACT -->
 
   <footer>
   </footer>
