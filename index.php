@@ -52,25 +52,27 @@
 <!-- INTRO -->
 
 <!-- PROJECT CARDS -->
-  <div class="container-lg">
+  <div class="row row-cols-1 row-cols-lg-2 g-4">
     <?php
       foreach ($projectData as $proj) {
-        echo "<div class=\"card mt-2 shadow opacity-75\" id=\"" . $proj['title'] . "\">";
-          echo "<div class=\"card-header\">";
-            echo "<div class \"list-inline\">";
-              echo "<h4 class=\"card-title list-inline-item\">" . $proj['title'] . "</h4>";
-              echo "<span class=\"badge bg-info float-end list-inline-item\">" . $proj['date'] . "</span>";
+        echo "<div class\"col\">";
+          echo "<div class=\"card mt-2 shadow opacity-75\" id=\"" . $proj['title'] . "\">";
+            echo "<div class=\"card-header\">";
+              echo "<div class \"list-inline\">";
+                echo "<h4 class=\"card-title list-inline-item\">" . $proj['title'] . "</h4>";
+                echo "<span class=\"badge bg-info float-end list-inline-item\">" . $proj['date'] . "</span>";
+              echo "</div>";
             echo "</div>";
-          echo "</div>";
-          echo "<div class=\"card-body\">";
-            echo "<img src=\"./img/" . $proj['img'] . "\" class=\"img-fluid\" alt=\"" . $proj['alt'] . "\">";
-            echo "<p class=\"card-text\">" . $proj['intro'] . "</p>";
-          echo "</div>";
-          echo "<div class=\"card-footer\">";
-            echo "<button type=\"button\" class=\"btn btn-success\" data-bs-toggle=\"modal\" data-bs-target=\"#" . $proj['tag'] . "Modal\"> More Info </button>";
-            if ($proj['link'] != "none") {
-              echo "<a href=\"" . $proj['link'] . "\" class=\"btn btn-success float-end\">Visit Site</a>";
-            }
+            echo "<div class=\"card-body\">";
+              echo "<img src=\"./img/" . $proj['img'] . "\" class=\"img-fluid\" alt=\"" . $proj['alt'] . "\">";
+              echo "<p class=\"card-text\">" . $proj['intro'] . "</p>";
+            echo "</div>";
+            echo "<div class=\"card-footer\">";
+              echo "<button type=\"button\" class=\"btn btn-success\" data-bs-toggle=\"modal\" data-bs-target=\"#" . $proj['tag'] . "Modal\"> More Info </button>";
+              if ($proj['link'] != "none") {
+                echo "<a href=\"" . $proj['link'] . "\" class=\"btn btn-success float-end\">Visit Site</a>";
+              }
+            echo "</div>";
           echo "</div>";
         echo "</div>";
       }
