@@ -96,7 +96,7 @@
             echo "<div class=\"card-footer\">";
               echo "<button type=\"button\" class=\"btn btn-success\" data-bs-toggle=\"modal\" data-bs-target=\"#" . $proj['tag'] . "Modal\"> More Info </button>";
               if ($proj['link'] != "none") {
-                echo "<a href=\"" . $proj['link'] . "\" class=\"btn btn-success float-end\">Visit Site</a>";
+                echo "<a href=\"" . $proj['link'] . "\" class=\"btn btn-success float-end\" target=\"_blank\">Visit Site</a>";
               }
             echo "</div>";
           echo "</div>";
