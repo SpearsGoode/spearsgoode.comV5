@@ -9,11 +9,12 @@
   <meta name="description" content="Project Portfolio for some of the more important projects I've worked on.">
   <title>SpearsGoode.com - Project Portfolio</title>
   <link rel="shortcut icon" type="image/svg" href="./img/SGlogoV2.svg">
-  <link href='./node_modules/bootstrap/dist/css/bootstrap.min.css' type='text/css' rel='stylesheet'>
-  <link href='./css/main.css' type='text/css' rel='stylesheet'>
+  <link href="./node_modules/bootstrap/dist/css/bootstrap.min.css" type="text/css" rel="stylesheet">
+  <link href="./node_modules/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet"/>
+  <link href="./css/main.css" type="text/css" rel="stylesheet">
 </head>
 
-<body class="container-fluid bg-dark">
+<body class="container-fluid justify-content-center bg-dark">
 
 <!-- NAVIGATION -->
   <nav class="navbar navbar-dark bg-dark sticky-top">
@@ -41,7 +42,7 @@
             ?>
 
             <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a> <!--FIXME-->
+              <a class="nav-link" href="#contact">Contact</a> <!--FIXME-->
             </li>
           </ul>
         </div>
@@ -50,15 +51,29 @@
   </nav>
 
 <!-- INTRO -->
-  <div class=" card shadow opacity-75 m-4">
-    <figure class="card-body text-center mb-0 pb-0">
+  <div class=" card text-center m-4 ms-auto me-auto shadow opacity-75" style="max-width: 960px">
+    <figure class="card-body mb-0 pb-0">
       <p class="lead">Let's make the world a better place!</p>
       <blockquote class="mt-4">
         <p>I have been interested in technology for as long as I can remember. As a result, I am very knowledgeable in many related fields: including but not limited to programming, web development/design, networks, blockchain, security, privacy, social networking, and a multitude of hardware and software that benefit such fields. My wish is to use the knowledge, skills, and experience I have gained to help make the world a better place. I am focused, hardworking, and punctual with excellent interpersonal, problem-solving, and organizational skills. I am a self-starter who has single-handedly deployed websites and is always working on a project. I am very interested in working with you and believe that collaboration would help us both to achieve our aspirations.</p>
       </blockquote>
     </figure>
-    <div class="card-footer">
-      Card footer
+    <div class="card-footer list-inline">
+      <a href="https://github.com/SpearsGoode/" class="list-inline-item" target="_blank">
+        <i class="bi bi-github"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/spears-goode/" class="list-inline-item" target="_blank">
+        <i class="bi bi-linkedin"></i>
+      </a>
+      <a href="https://twitter.com/SpearsGoode/" class="list-inline-item" target="_blank">
+        <i class="bi bi-twitter"></i>
+      </a>
+      <a href="https://www.instagram.com/spearsgoode/" class="list-inline-item" target="_blank">
+      <i class="bi bi-instagram"></i>
+      </a>
+      <a href="#contact" class="list-inline-item"> <!--FIXME-->
+        <i class="bi bi-send"></i>
+      </a>
     </div>
   </div>
 
@@ -74,7 +89,7 @@
                 echo "<span class=\"badge bg-info float-end list-inline-item\">" . $proj['date'] . "</span>";
               echo "</div>";
             echo "</div>";
-            echo "<div class=\"card-body\">";
+             echo "<div class=\"card-body\">";
               echo "<img src=\"./img/" . $proj['img'] . "\" class=\"img-fluid\" alt=\"" . $proj['alt'] . "\">";
               echo "<p class=\"card-text\">" . $proj['intro'] . "</p>";
             echo "</div>";
