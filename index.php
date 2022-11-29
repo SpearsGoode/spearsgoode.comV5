@@ -50,6 +50,17 @@
   </nav>
 
 <!-- INTRO -->
+  <div class=" card shadow opacity-75 m-4">
+    <figure class="card-body text-center mb-0 pb-0">
+      <p class="lead">Let's make the world a better place!</p>
+      <blockquote class="mt-4">
+        <p>I have been interested in technology for as long as I can remember. As a result, I am very knowledgeable in many related fields: including but not limited to programming, web development/design, networks, blockchain, security, privacy, social networking, and a multitude of hardware and software that benefit such fields. My wish is to use the knowledge, skills, and experience I have gained to help make the world a better place. I am focused, hardworking, and punctual with excellent interpersonal, problem-solving, and organizational skills. I am a self-starter who has single-handedly deployed websites and is always working on a project. I am very interested in working with you and believe that collaboration would help us both to achieve our aspirations.</p>
+      </blockquote>
+    </figure>
+    <div class="card-footer">
+      Card footer
+    </div>
+  </div>
 
 <!-- PROJECT CARDS -->
   <div class="row row-cols-1 row-cols-lg-2 g-4">
@@ -90,7 +101,7 @@
               echo "<button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"modal\" aria-label=\"Close\"></button>";
             echo "</div>";
             echo "<div class=\"modal-body\">";
-              echo $proj['info']; //FIXME
+              echo $proj['info'];
             echo "</div>";
             echo "<div class=\"modal-footer\">";
               echo "<button type=\"button\" class=\"btn btn-secondary\" data-bs-dismiss=\"modal\">Close</button>";
@@ -104,6 +115,7 @@
 <!-- CONTACT -->
 
   <footer>
+    &copy; Spears Goode
   </footer>
 
   <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
