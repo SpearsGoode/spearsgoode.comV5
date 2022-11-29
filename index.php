@@ -6,7 +6,7 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="utf-8">
-  <meta name="description" content="Project Portfolio for some of the more important projects I've worked on."> <!--FIXME-->
+  <meta name="description" content="Project Portfolio for some of the more important projects I've worked on.">
   <title>SpearsGoode.com - Project Portfolio</title>
   <link rel="shortcut icon" type="image/svg" href="./img/SGlogoV2.svg">
   <link href='./node_modules/bootstrap/dist/css/bootstrap.min.css' type='text/css' rel='stylesheet'>
