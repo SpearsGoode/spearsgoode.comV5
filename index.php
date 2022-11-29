@@ -6,9 +6,9 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="utf-8">
-  <meta name="description" content=""> <!--FIXME-->
+  <meta name="description" content="Project Portfolio for some of the more important projects I've worked on.">
   <title>SpearsGoode.com - Project Portfolio</title>
-  <link rel="shortcut icon" type="image/svg" href="./img/Logo.svg">
+  <link rel="shortcut icon" type="image/svg" href="./img/SGlogoV2.svg">
   <link href='./node_modules/bootstrap/dist/css/bootstrap.min.css' type='text/css' rel='stylesheet'>
   <link href='./css/main.css' type='text/css' rel='stylesheet'>
 </head>
@@ -50,24 +50,40 @@
   </nav>
 
 <!-- INTRO -->
+  <div class=" card shadow opacity-75 m-4">
+    <figure class="card-body text-center mb-0 pb-0">
+      <p class="lead">Let's make the world a better place!</p>
+      <blockquote class="mt-4">
+        <p>I have been interested in technology for as long as I can remember. As a result, I am very knowledgeable in many related fields: including but not limited to programming, web development/design, networks, blockchain, security, privacy, social networking, and a multitude of hardware and software that benefit such fields. My wish is to use the knowledge, skills, and experience I have gained to help make the world a better place. I am focused, hardworking, and punctual with excellent interpersonal, problem-solving, and organizational skills. I am a self-starter who has single-handedly deployed websites and is always working on a project. I am very interested in working with you and believe that collaboration would help us both to achieve our aspirations.</p>
+      </blockquote>
+    </figure>
+    <div class="card-footer">
+      Card footer
+    </div>
+  </div>
 
 <!-- PROJECT CARDS -->
-  <div class="container-lg">
+  <div class="row row-cols-1 row-cols-lg-2 g-4">
     <?php
       foreach ($projectData as $proj) {
-        echo "<div class=\"card mt-2 shadow\" id=\"" . $proj['title'] . "\">";
-          echo "<div class=\"card-header\">";
-            echo "<h5 class=\"card-title\">" . $proj['title'] . "<span class=\"badge bg-info float-end\">" . $proj['date'] . "</span></h5>";
-          echo "</div>";
-          echo "<div class=\"card-body\">";
-            echo "<img src=\"./img/" . $proj['img'] . "\" class=\"img-fluid\" alt=\"" . $proj['alt'] . "\">";
-            echo "<p class=\"card-text\">" . $proj['intro'] . "</p>";
-          echo "</div>";
-          echo "<div class=\"card-footer\">";
-            echo "<button type=\"button\" class=\"btn btn-success\" data-bs-toggle=\"modal\" data-bs-target=\"#" . $proj['tag'] . "Modal\"> More Info </button>";
-            if ($proj['link'] != "none") {
-              echo "<a href=\"" . $proj['link'] . "\" class=\"btn btn-success float-end\">Visit Site</a>";
-            }
+        echo "<div class\"col\">";
+          echo "<div class=\"card mt-2 shadow opacity-75\" id=\"" . $proj['title'] . "\">";
+            echo "<div class=\"card-header\">";
+              echo "<div class \"list-inline\">";
+                echo "<h4 class=\"card-title list-inline-item\">" . $proj['title'] . "</h4>";
+                echo "<span class=\"badge bg-info float-end list-inline-item\">" . $proj['date'] . "</span>";
+              echo "</div>";
+            echo "</div>";
+            echo "<div class=\"card-body\">";
+              echo "<img src=\"./img/" . $proj['img'] . "\" class=\"img-fluid\" alt=\"" . $proj['alt'] . "\">";
+              echo "<p class=\"card-text\">" . $proj['intro'] . "</p>";
+            echo "</div>";
+            echo "<div class=\"card-footer\">";
+              echo "<button type=\"button\" class=\"btn btn-success\" data-bs-toggle=\"modal\" data-bs-target=\"#" . $proj['tag'] . "Modal\"> More Info </button>";
+              if ($proj['link'] != "none") {
+                echo "<a href=\"" . $proj['link'] . "\" class=\"btn btn-success float-end\">Visit Site</a>";
+              }
+            echo "</div>";
           echo "</div>";
         echo "</div>";
       }
@@ -78,14 +94,14 @@
   <?php
     foreach ($projectData as $proj) {
       echo "<div class=\"modal fade\" id=\"" . $proj['tag'] . "Modal\" tabindex=\"-1\" aria-labelledby=\"" . $proj['tag'] . "ModalLabel\" aria-hidden=\"true\">";
-        echo "<div class=\"modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl\">";
+        echo "<div class=\"modal-dialog modal-dialog-centered modal-dialog-scrollable modal-fullscreen-lg-down modal-xl\">";
           echo "<div class=\"modal-content\">";
             echo "<div class=\"modal-header\">";
-              echo "<h5 class=\"modal-title fs-5\" id=\"" . $proj['tag'] . "ModalLabel\">" . $proj['title'] . "</h5>";
+              echo "<h5 class=\"modal-title\" id=\"" . $proj['tag'] . "ModalLabel\">" . $proj['title'] . "</h5>";
               echo "<button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"modal\" aria-label=\"Close\"></button>";
             echo "</div>";
             echo "<div class=\"modal-body\">";
-              echo $proj['info']; //FIXME
+              echo $proj['info'];
             echo "</div>";
             echo "<div class=\"modal-footer\">";
               echo "<button type=\"button\" class=\"btn btn-secondary\" data-bs-dismiss=\"modal\">Close</button>";
@@ -99,6 +115,7 @@
 <!-- CONTACT -->
 
   <footer>
+    &copy; Spears Goode
   </footer>
 
   <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
