@@ -1,1 +1,31 @@
-FIXME
+<div class="d-grid gap-2">
+    <p>The code for this indicator is not publicly available. However, I will include a few more examples.</p>
+
+    <h5 class="display-6"><abbr title="Bitcoin Liquid Index">BLX</abbr></h5>
+    <img src="./img/aHODLm-BLX.jpg" alt="aHODLm BLX Example" class="img-fluid"></img>
+    <a href="./img/aHODLm-BLX.png" class="btn btn-dark fs-6 p-2 mb-4" type="button" target="_blank">View Fullscreen</a>
+
+    <h5 class="display-6"><abbr title="Ethereum">ETH</abbr></h5>
+    <img src="./img/aHODLm-ETH.jpg" alt="aHODLm ETH Example" class="img-fluid"></img>
+    <a href="./img/aHODLm-ETH.png" class="btn btn-dark fs-6 p-2 mb-4" type="button" target="_blank">View Fullscreen</a>
+
+    <h5 class="display-6"><abbr title="Vanguard Total Stock Market Index">VTI</abbr></h5>
+    <img src="./img/aHODLm-VTI.jpg" alt="aHODLm VTI Example" class="img-fluid"></img>
+    <a href="./img/aHODLm-VTI.png" class="btn btn-dark fs-6 p-2 mb-4" type="button" target="_blank">View Fullscreen</a>
+
+    <h5 class="display-6"><abbr title="Dow Jones Industrial Average">DJI</abbr></h5>
+    <img src="./img/aHODLm-DJI.jpg" alt="aHODLm DJI Example" class="img-fluid"></img>
+    <a href="./img/aHODLm-DJI.png" class="btn btn-dark fs-6 p-2 mb-4" type="button" target="_blank">View Fullscreen</a>
+
+    <h5 class="display-6"><abbr title="S&P 500 Index">SPX</abbr></h5>
+    <img src="./img/aHODLm-SPX.jpg" alt="aHODLm SPX Example" class="img-fluid"></img>
+    <a href="./img/aHODLm-SPX.png" class="btn btn-dark fs-6 p-2 mb-4" type="button" target="_blank">View Fullscreen</a>
+
+    <h5 class="display-6"><abbr title="NASDAQ 100 Index">NDX</abbr></h5>
+    <img src="./img/aHODLm-NDX.jpg" alt="aHODLm NDX Example" class="img-fluid"></img>
+    <a href="./img/aHODLm-NDX.png" class="btn btn-dark fs-6 p-2 mb-4" type="button" target="_blank">View Fullscreen</a>
+
+    <h5 class="display-6"><abbr title="Russell 2000 Index">RUT</abbr></h5>
+    <img src="./img/aHODLm-RUT.jpg" alt="aHODLm RUT Example" class="img-fluid"></img>
+    <a href="./img/aHODLm-RUT.png" class="btn btn-dark fs-6 p-2 mb-4" type="button" target="_blank">View Fullscreen</a>
+</div>

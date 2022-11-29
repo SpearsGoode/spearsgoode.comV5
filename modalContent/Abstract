@@ -1,12 +1,12 @@
-<h5>Evolution</h5>
+<h5 class="display-6">Evolution</h5>
 <p>Abstract-Artwork.com went through several stages before it became what it is today. In the very beginning, it severed no purpose other than to drive more traffic to SpearsGoode.com, which was primarily a portfolio of my artwork at the time.<p>
-<h5>Adding More Content</h5>
+<h5 class="display-6">Adding More Content</h5>
 <p>After a first draft, which was just a landing page. I thought that it would help fill up the site if I also hosted work by other artists. I started sending out messages, to find out if anyone would be interested; to my surprise, many people were interested. As a result, the featured artists, all artists, and submit art pages were born.<p>
-<h5>Getting Help</h5>
+<h5 class="display-6">Getting Help</h5>
 <p>Once I became aware of the size of the project I had taken on, I realized that I may need some help. I did not receive the kind of help that I had hoped for. Instead, I received some much-needed suggestions. The most helpful of these being a stark reality check; It was completely contradictory to ask people to submit their art to a website meant to drive traffic to my art.<p>
-<h5>Turning Point</h5>
+<h5 class="display-6">Turning Point</h5>
 <p>I promptly removed any link to my site other than the one in my section at the bottom of the all artists page. From then on, Abstract-Artwork.com's sole purpose was to build a community. Soon after, I added a forum in an attempt to get the artists engaging with one another. Unfortunately, I knew nothing about moderating or managing a forum.<p>
-<h5>Challenges</h5>
+<h5 class="display-6">Challenges</h5>
 <p>The first problem I encountered was that adding more artwork had to be done manually and was extremely time-consuming. I needed this to be easier so I could continue to work on other things. I began learning PHP so I could create dynamic pages and streamline the submission process. The next problem that arose was due to the forum. I visited it one day to find every page of the forum filled with spam links. Rather than sink more time into something no one used, I decided to completely remove it.<p>
-<h5>Conclusion</h5>
+<h5 class="display-6">Conclusion</h5>
 <p>I continued to work on improving the site and adding more artwork for a while after overcoming these difficulties but in the end, It was still too time-consuming. The only way to overcome some of the core problems would be to start over using some sort of framework or CMS (content management system) so I wouldn't have to reinvent the wheel. I intend to do this someday at AbstractArt.work but for now, I'm focusing on other projects. Creating Abstract-Artwork.com was an amazing adventure; the knowledge and experience I gained has already proven itself invaluable.<p>
