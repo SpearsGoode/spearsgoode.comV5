@@ -78,7 +78,7 @@
   </div>
 
 <!-- PROJECT CARDS -->
-  <div class="row row-cols-1 row-cols-lg-2 g-4">
+  <div class="row row-cols-1 row-cols-lg-2 g-4 p-0 ms-auto me-auto container-lg">
     <?php
       foreach ($projectData as $proj) {
         echo "<div class\"col\">";
@@ -128,6 +128,7 @@
   ?>
 
 <!-- CONTACT -->
+<!-- FIXME -->
 
   <footer>
     &copy; Spears Goode
