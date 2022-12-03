@@ -1,4 +1,4 @@
-<?php require './projectData.php'; ?>
+<?php require './php/projectData.php'; ?>
 
 <!DOCTYPE html>
 <html  lang="en">
@@ -42,7 +42,7 @@
             ?>
 
             <li class="nav-item">
-              <a class="nav-link" href="#contact">Contact</a> <!--FIXME-->
+              <a class="nav-link" href="#contact">Contact</a>
             </li>
           </ul>
         </div>
@@ -51,7 +51,7 @@
   </nav>
 
 <!-- INTRO -->
-  <div class=" card text-center m-4 ms-auto me-auto shadow opacity-75" style="max-width: 960px">
+  <div class="card text-center m-4 ms-auto me-auto shadow opacity-75" style="max-width: 960px">
     <figure class="card-body mb-0 pb-0">
       <p class="lead">Let's make the world a better place!</p>
       <blockquote class="mt-4">
@@ -69,9 +69,9 @@
         <i class="bi bi-twitter"></i>
       </a>
       <a href="https://www.instagram.com/spearsgoode/" class="list-inline-item" target="_blank">
-      <i class="bi bi-instagram"></i>
+        <i class="bi bi-instagram"></i>
       </a>
-      <a href="#contact" class="list-inline-item"> <!--FIXME-->
+      <a href="#contact" class="list-inline-item">
         <i class="bi bi-send"></i>
       </a>
     </div>
@@ -128,7 +128,54 @@
   ?>
 
 <!-- CONTACT -->
-<!-- FIXME -->
+<div class="card text-center m-4 ms-auto me-auto shadow opacity-75" id="contact" style="max-width: 960px">
+  <p class="lead mt-2">Let's Connect!</p>
+  <form class="card-body p-2 d-grid needs-validation" novalidate>
+    <div class="row mb-3 g-3">
+      <div class="col form-floating">
+        <input type="text" class="form-control" id="firstName" placeholder="Jane" required>
+        <label for="firstName" class="ps-4">First Name:</label>
+        <div class="valid-feedback">
+          <i class="bi bi-check"></i>
+        </div>
+      </div>
+      <div class="col form-floating">
+        <input type="text" class="form-control" id="lastName" placeholder="Doe">
+        <label for="lastName" class="ps-4">Last Name:</label>
+      </div>
+    </div>
+    <div class="form-floating mb-3">
+      <input type="email" class="form-control" id="returnEmail" placeholder="janedoe@protonmail.com" required>
+      <label for="returnEmail">Email Address:</label>
+      <div class="valid-feedback">
+        <i class="bi bi-check"></i>
+      </div>
+    </div>
+    <div class="form-floating mb-3">
+      <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 150px" required></textarea>
+      <label for="message">Message:</label>
+      <div class="valid-feedback">
+        <i class="bi bi-check"></i>
+      </div>
+    </div>
+    <button class="btn btn-primary fs-6 p-2 mb-2" type="submit">Send Message</button>
+  </form>
+  <div class="card-footer list-inline">
+    <a href="https://github.com/SpearsGoode/" class="list-inline-item" target="_blank">
+      <i class="bi bi-github"></i>
+    </a>
+    <a href="https://www.linkedin.com/in/spears-goode/" class="list-inline-item" target="_blank">
+      <i class="bi bi-linkedin"></i>
+    </a>
+    <a href="https://twitter.com/SpearsGoode/" class="list-inline-item" target="_blank">
+      <i class="bi bi-twitter"></i>
+    </a>
+    <a href="https://www.instagram.com/spearsgoode/" class="list-inline-item" target="_blank">
+      <i class="bi bi-instagram"></i>
+    </a>
+  </div>
+</div>
+
 
   <footer>
     &copy; Spears Goode
