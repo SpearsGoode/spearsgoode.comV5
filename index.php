@@ -1,4 +1,7 @@
-<?php require './projectData.php'; ?>
+<?php
+  require './php/projectData.php';
+  require './php/buildMsg.php';
+?>
 
 <!DOCTYPE html>
 <html  lang="en">
@@ -9,9 +12,9 @@
   <meta name="description" content="Project Portfolio for some of the more important projects I've worked on.">
   <title>SpearsGoode.com - Project Portfolio</title>
   <link rel="shortcut icon" type="image/svg" href="./img/SGlogoV2.svg">
-  <link href="./node_modules/bootstrap/dist/css/bootstrap.min.css" type="text/css" rel="stylesheet">
+<!--   <link href="./node_modules/bootstrap/dist/css/bootstrap.min.css" type="text/css" rel="stylesheet"> -->
+  <link href="./css/main.min.css" type="text/css" rel="stylesheet">
   <link href="./node_modules/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet"/>
-  <link href="./css/main.css" type="text/css" rel="stylesheet">
 </head>
 
 <body class="container-fluid justify-content-center bg-dark">
@@ -42,7 +45,7 @@
             ?>
 
             <li class="nav-item">
-              <a class="nav-link" href="#contact">Contact</a> <!--FIXME-->
+              <a class="nav-link" href="#contact">Contact</a>
             </li>
           </ul>
         </div>
@@ -51,7 +54,7 @@
   </nav>
 
 <!-- INTRO -->
-  <div class=" card text-center m-4 ms-auto me-auto shadow opacity-75" style="max-width: 960px">
+  <div class="card text-center m-4 ms-auto me-auto shadow opacity-75" style="max-width: 960px">
     <figure class="card-body mb-0 pb-0">
       <p class="lead">Let's make the world a better place!</p>
       <blockquote class="mt-4">
@@ -69,16 +72,16 @@
         <i class="bi bi-twitter"></i>
       </a>
       <a href="https://www.instagram.com/spearsgoode/" class="list-inline-item" target="_blank">
-      <i class="bi bi-instagram"></i>
+        <i class="bi bi-instagram"></i>
       </a>
-      <a href="#contact" class="list-inline-item"> <!--FIXME-->
+      <a href="#contact" class="list-inline-item">
         <i class="bi bi-send"></i>
       </a>
     </div>
   </div>
 
 <!-- PROJECT CARDS -->
-  <div class="row row-cols-1 row-cols-lg-2 g-4">
+  <div class="row row-cols-1 row-cols-lg-2 g-4 p-0 ms-auto me-auto container-lg">
     <?php
       foreach ($projectData as $proj) {
         echo "<div class\"col\">";
@@ -128,6 +131,97 @@
   ?>
 
 <!-- CONTACT -->
+<div class="card text-center m-4 ms-auto me-auto shadow opacity-75" id="contact" style="max-width: 960px">
+
+  <!-- FORM -->
+  <p class="lead mt-2">Let's Connect!</p>
+  <p class="text-danger">This form is currently unable to send messages. This should be fixed shortly.</p>
+  <form class="card-body p-2 d-grid needs-validation" method="post" action="./php/buildMsg.php" enctype="multipart/form-data">
+    <div class="row mb-3 g-3">
+      <div class="col form-floating">
+        <input type="text" class="form-control" name="fname" id="fname" placeholder="Jane" required>
+        <label for="fname" class="ps-4">First Name:
+          <?php if ($missing && in_array('fname', $missing)) : ?>
+            <span class="text-danger">Please enter your first name.</span>
+          <?php endif; ?>
+        </label>
+        <div class="valid-feedback">
+          <i class="bi bi-check"></i>
+        </div>
+      </div>
+      <div class="col form-floating">
+        <input type="text" class="form-control" name="lname" id="lname" placeholder="Doe">
+        <label for="lname" class="ps-4">Last Name:</label>
+      </div>
+    </div>
+
+    <div class="form-floating mb-3">
+      <input type="email" class="form-control" name="email" id="email" placeholder="janedoe@protonmail.com" required>
+      <label for="email">Email:
+        <?php if ($missing && in_array('email', $missing)) : ?>
+          <span class="text-danger">Please enter your email.</span>
+        <?php elseif (isset($errors['email'])) : ?>
+          <span class="text-danger">Invalid Email</span>
+        <?php endif; ?>
+      </label>
+      <div class="valid-feedback">
+        <i class="bi bi-check"></i>
+      </div>
+    </div>
+
+    <div class="form-floating mb-3">
+      <textarea class="form-control" placeholder="Leave a message here" name="msg" id="msg" style="height: 150px" required></textarea>
+      <label for="msg">Message:
+        <?php if ($missing && in_array('msg', $missing)) : ?>
+          <span class="text-danger">Please include a message.</span>
+        <?php endif; ?>
+      </label>
+      <div class="valid-feedback">
+        <i class="bi bi-check"></i>
+      </div>
+    </div>
+
+    <input class="btn btn-primary fs-6 p-2 mb-2" type="submit" name="send" id="send">
+
+    <!-- ERROR MSSAGES -->
+    <?php if ($_POST && ($suspect || isset($errors['mailfail']))) : ?>
+      <p class="text-danger">Sorry, your message could not be sent.</p>
+    <?php elseif ($errors || $missing) : ?>
+      <p class="text-danger">Please fix the item(s) indicated.</p>
+    <?php elseif ($_POST && !$suspect && !$errors && !$missing) : ?>
+      <p class="text-success">Message sent!</p>
+    <?php endif; ?>
+
+    <!-- TEST: shows message contents/headers -->
+    <?php
+//       echo "<pre>";
+//       if ($_POST) {
+//         echo "Message\n\n";
+//         echo htmlentities($mailcon);
+//         echo "Headers\n\n";
+//         echo htmlentities($headers);
+//       }
+//       echo "</pre>";
+    ?>
+  </form>
+
+  <div class="card-footer list-inline">
+    <a href="https://github.com/SpearsGoode/" class="list-inline-item" target="_blank">
+      <i class="bi bi-github"></i>
+    </a>
+    <a href="https://www.linkedin.com/in/spears-goode/" class="list-inline-item" target="_blank">
+      <i class="bi bi-linkedin"></i>
+    </a>
+    <a href="https://twitter.com/SpearsGoode/" class="list-inline-item" target="_blank">
+      <i class="bi bi-twitter"></i>
+    </a>
+    <a href="https://www.instagram.com/spearsgoode/" class="list-inline-item" target="_blank">
+      <i class="bi bi-instagram"></i>
+    </a>
+  </div>
+
+</div>
+
 
   <footer>
     &copy; Spears Goode
