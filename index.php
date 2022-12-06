@@ -54,7 +54,7 @@
   </nav>
 
 <!-- INTRO -->
-  <div class="card text-center m-4 ms-auto me-auto shadow opacity-75" style="max-width: 960px">
+  <div class="card text-center m-4 ms-auto me-auto shadow bg-light" style="max-width: 960px">
     <figure class="card-body mb-0 pb-0">
       <p class="lead">Let's make the world a better place!</p>
       <blockquote class="mt-4">
@@ -85,7 +85,7 @@
     <?php
       foreach ($projectData as $proj) {
         echo "<div class\"col\">";
-          echo "<div class=\"card mt-2 shadow opacity-75\" id=\"" . $proj['title'] . "\">";
+          echo "<div class=\"card mt-2 shadow bg-light\" id=\"" . $proj['title'] . "\">";
             echo "<div class=\"card-header\">";
               echo "<div class \"list-inline\">";
                 echo "<h4 class=\"card-title list-inline-item\">" . $proj['title'] . "</h4>";
@@ -97,9 +97,9 @@
               echo "<p class=\"card-text\">" . $proj['intro'] . "</p>";
             echo "</div>";
             echo "<div class=\"card-footer\">";
-              echo "<button type=\"button\" class=\"btn btn-success\" data-bs-toggle=\"modal\" data-bs-target=\"#" . $proj['tag'] . "Modal\"> More Info </button>";
+              echo "<button type=\"button\" class=\"btn btn-secondary\" data-bs-toggle=\"modal\" data-bs-target=\"#" . $proj['tag'] . "Modal\"> More Info </button>";
               if ($proj['link'] != "none") {
-                echo "<a href=\"" . $proj['link'] . "\" class=\"btn btn-success float-end\" target=\"_blank\">Visit Site</a>";
+                echo "<a href=\"" . $proj['link'] . "\" class=\"btn btn-secondary float-end\" target=\"_blank\">Visit Site</a>";
               }
             echo "</div>";
           echo "</div>";
@@ -111,7 +111,7 @@
 <!-- MODALS -->
   <?php
     foreach ($projectData as $proj) {
-      echo "<div class=\"modal fade\" id=\"" . $proj['tag'] . "Modal\" tabindex=\"-1\" aria-labelledby=\"" . $proj['tag'] . "ModalLabel\" aria-hidden=\"true\">";
+      echo "<div class=\"modal fade bg-light\" id=\"" . $proj['tag'] . "Modal\" tabindex=\"-1\" aria-labelledby=\"" . $proj['tag'] . "ModalLabel\" aria-hidden=\"true\">";
         echo "<div class=\"modal-dialog modal-dialog-centered modal-dialog-scrollable modal-fullscreen-lg-down modal-xl\">";
           echo "<div class=\"modal-content\">";
             echo "<div class=\"modal-header\">";
@@ -131,7 +131,7 @@
   ?>
 
 <!-- CONTACT -->
-<div class="card text-center m-4 ms-auto me-auto shadow opacity-75" id="contact" style="max-width: 960px">
+<div class="card text-center m-4 ms-auto me-auto shadow bg-light" id="contact" style="max-width: 960px">
 
   <!-- FORM -->
   <p class="lead mt-2">Let's Connect!</p>
@@ -181,7 +181,7 @@
       </div>
     </div>
 
-    <input class="btn btn-primary fs-6 p-2 mb-2" type="submit" name="send" id="send">
+    <input class="btn btn-secondary fs-6 p-2 mb-2" type="submit" name="send" id="send">
 
     <!-- ERROR MSSAGES -->
     <?php if ($_POST && ($suspect || isset($errors['mailfail']))) : ?>
