@@ -12,9 +12,9 @@
   <meta name="description" content="Project Portfolio for some of the more important projects I've worked on.">
   <title>SpearsGoode.com - Project Portfolio</title>
   <link rel="shortcut icon" type="image/svg" href="./img/SGlogoV2.svg">
-  <link href="./node_modules/bootstrap/dist/css/bootstrap.min.css" type="text/css" rel="stylesheet">
+<!--   <link href="./node_modules/bootstrap/dist/css/bootstrap.min.css" type="text/css" rel="stylesheet"> -->
+  <link href="./css/main.min.css" type="text/css" rel="stylesheet">
   <link href="./node_modules/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet"/>
-  <link href="./css/main.css" type="text/css" rel="stylesheet">
 </head>
 
 <body class="container-fluid justify-content-center bg-dark">
@@ -135,7 +135,8 @@
 
   <!-- FORM -->
   <p class="lead mt-2">Let's Connect!</p>
-  <form class="card-body p-2 d-grid needs-validation" method="post" action="./php/buildMsg.php" enctype="multipart/form-data" novalidate>
+  <p class="text-danger">This form is currently unable to send messages. This should be fixed shortly.</p>
+  <form class="card-body p-2 d-grid needs-validation" method="post" action="./php/buildMsg.php" enctype="multipart/form-data">
     <div class="row mb-3 g-3">
       <div class="col form-floating">
         <input type="text" class="form-control" name="fname" id="fname" placeholder="Jane" required>
@@ -193,14 +194,14 @@
 
     <!-- TEST: shows message contents/headers -->
     <?php
-      echo "<pre>";
-      if ($_POST) {
-        echo "Message\n\n";
-        echo htmlentities($mailcon);
-        echo "Headers\n\n";
-        echo htmlentities($headers);
-      }
-      echo "</pre>";
+//       echo "<pre>";
+//       if ($_POST) {
+//         echo "Message\n\n";
+//         echo htmlentities($mailcon);
+//         echo "Headers\n\n";
+//         echo htmlentities($headers);
+//       }
+//       echo "</pre>";
     ?>
   </form>
 

@@ -37,7 +37,7 @@
     endif;
     if (!$errors && !$missing) :
       $headers = implode("\r\n", $headers);
-      $mailcon= '';
+      $mailcon = '';
       foreach ($expected as $field) :
         if (isset($$field) && !empty($$field)) {
           $val = $$field;
