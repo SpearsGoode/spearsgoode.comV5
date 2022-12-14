@@ -136,50 +136,24 @@
 
   <!-- FORM -->
   <p class="lead mt-2">Let's Connect!</p>
-  <p class="text-danger">This form is currently unable to send messages. This should be fixed shortly.</p>
   <form class="card-body p-2 d-grid needs-validation" method="post" action="./php/buildMsg.php" enctype="multipart/form-data">
     <div class="row mb-3 g-3">
       <div class="col form-floating">
         <input type="text" class="form-control" name="fname" id="fname" placeholder="Jane" required>
-        <label for="fname" class="ps-4">First Name:
-          <?php if ($missing && in_array('fname', $missing)) : ?>
-            <span class="text-danger">Please enter your first name.</span>
-          <?php endif; ?>
-        </label>
-        <div class="valid-feedback">
-          <i class="bi bi-check"></i>
-        </div>
+        <label for="fname" class="ps-4">First Name:</label>
       </div>
       <div class="col form-floating">
         <input type="text" class="form-control" name="lname" id="lname" placeholder="Doe">
         <label for="lname" class="ps-4">Last Name:</label>
       </div>
     </div>
-
     <div class="form-floating mb-3">
       <input type="email" class="form-control" name="email" id="email" placeholder="janedoe@protonmail.com" required>
-      <label for="email">Email:
-        <?php if ($missing && in_array('email', $missing)) : ?>
-          <span class="text-danger">Please enter your email.</span>
-        <?php elseif (isset($errors['email'])) : ?>
-          <span class="text-danger">Invalid Email</span>
-        <?php endif; ?>
-      </label>
-      <div class="valid-feedback">
-        <i class="bi bi-check"></i>
-      </div>
+      <label for="email">Email:</label>
     </div>
-
     <div class="form-floating mb-3">
       <textarea class="form-control" placeholder="Leave a message here" name="msg" id="msg" style="height: 150px" required></textarea>
-      <label for="msg">Message:
-        <?php if ($missing && in_array('msg', $missing)) : ?>
-          <span class="text-danger">Please include a message.</span>
-        <?php endif; ?>
-      </label>
-      <div class="valid-feedback">
-        <i class="bi bi-check"></i>
-      </div>
+      <label for="msg">Message:</label>
     </div>
 
     <input class="btn btn-secondary fs-6 p-2 mb-2" type="submit" name="send" id="send">
@@ -192,18 +166,6 @@
     <?php elseif ($_POST && !$suspect && !$errors && !$missing) : ?>
       <p class="text-success">Message sent!</p>
     <?php endif; ?>
-
-    <!-- TEST: shows message contents/headers -->
-    <?php
-//       echo "<pre>";
-//       if ($_POST) {
-//         echo "Message\n\n";
-//         echo htmlentities($mailcon);
-//         echo "Headers\n\n";
-//         echo htmlentities($headers);
-//       }
-//       echo "</pre>";
-    ?>
   </form>
 
   <div class="card-footer list-inline">

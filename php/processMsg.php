@@ -56,7 +56,7 @@ require '../../PHPMailer/src/SMTP.php';
           $val = implode(', ', $val);
         }
         $field = str_replace('_', ' ', $field);
-        $mailcon .= ucfirst($field) . ": $val\r\n\r\n";
+        $mailcon .= ucfirst($field) . ": " . $val . "<br>";
       endforeach;
       $mailcon = wordwrap($mailcon, 70);
       $mailSent = mail($to, $subject, $mailcon, $headers, $authorized);
@@ -66,7 +66,8 @@ require '../../PHPMailer/src/SMTP.php';
         mail($to, $subject, $mailcon, $headers, $authorized);
         $mail = new PHPMailer(true);
         try{
-          $mail->SMTPDebug = 2;    // TEST Enable verbose debug output
+          //$mail->SMTPDebug = 2;    // TEST Enable verbose debug output
+          $mail->isSMTP();
           $mail->addAddress('connect@spearsgoode.com', 'connect@spearsgoode.com');
           $mail->addReplyTo($validemail, 'Information');
           $mail->isHTML(true);
