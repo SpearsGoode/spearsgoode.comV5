@@ -13,7 +13,6 @@
     require './processMsg.php';
     if ($mailSent) {
       header('Location: ../index.php#success');
-      mail("connect@spearsgoode.com", "test mail()", "hope this works :/");
       exit;
     } else {
       header('Location: ../index.php#error');
