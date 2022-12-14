@@ -33,8 +33,8 @@
           <h5 class="offcanvas-title" id="offcanvasNavbarLabel"></h5>
           <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
-        <div class="offcanvas-body">
-          <ul class="navbar-nav nav-fill justify-content-end flex-grow-1 pe-3">
+        <div class="offcanvas-body d-flex flex-column">
+          <ul class="navbar-nav nav-fill pe-3">
 
             <?php
               foreach ($projectData as $proj) {
@@ -48,6 +48,7 @@
               <a class="nav-link" href="#contact">Contact</a>
             </li>
           </ul>
+          <img src="./img/SGlogoV2.svg" alt="Spears Goode Logo" class="img-fluid m-auto">
         </div>
       </div>
     </div>
@@ -89,7 +90,7 @@
             echo "<div class=\"card-header\">";
               echo "<div class \"list-inline\">";
                 echo "<h4 class=\"card-title list-inline-item\">" . $proj['title'] . "</h4>";
-                echo "<span class=\"badge bg-info float-end list-inline-item\">" . $proj['date'] . "</span>";
+                echo "<span class=\"badge bg-dark float-end list-inline-item\">" . $proj['date'] . "</span>";
               echo "</div>";
             echo "</div>";
              echo "<div class=\"card-body\">";
@@ -111,9 +112,9 @@
 <!-- MODALS -->
   <?php
     foreach ($projectData as $proj) {
-      echo "<div class=\"modal fade bg-light\" id=\"" . $proj['tag'] . "Modal\" tabindex=\"-1\" aria-labelledby=\"" . $proj['tag'] . "ModalLabel\" aria-hidden=\"true\">";
+      echo "<div class=\"modal fade\" id=\"" . $proj['tag'] . "Modal\" tabindex=\"-1\" aria-labelledby=\"" . $proj['tag'] . "ModalLabel\" aria-hidden=\"true\">";
         echo "<div class=\"modal-dialog modal-dialog-centered modal-dialog-scrollable modal-fullscreen-lg-down modal-xl\">";
-          echo "<div class=\"modal-content\">";
+          echo "<div class=\"modal-content bg-light\">";
             echo "<div class=\"modal-header\">";
               echo "<h5 class=\"modal-title\" id=\"" . $proj['tag'] . "ModalLabel\">" . $proj['title'] . "</h5>";
               echo "<button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"modal\" aria-label=\"Close\"></button>";

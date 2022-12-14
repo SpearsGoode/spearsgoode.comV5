@@ -1,4 +1,12 @@
 <?php
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+require '../../PHPMailer/src/Exception.php';
+require '../../PHPMailer/src/PHPMailer.php';
+require '../../PHPMailer/src/SMTP.php';
+
   $mailSent = false;
   $suspect = false;
   $pattern = '/Content-type:|Bcc:|Cc:/i';
@@ -56,6 +64,19 @@
         $errors['mailfail'] = true;
       } else {
         mail($to, $subject, $mailcon, $headers, $authorized);
+        $mail = new PHPMailer(true);
+        try{
+          $mail->SMTPDebug = 2;    // TEST Enable verbose debug output
+          $mail->addAddress('connect@spearsgoode.com', 'connect@spearsgoode.com');
+          $mail->addReplyTo($validemail, 'Information');
+          $mail->isHTML(true);
+          $mail->Subject = $subject;
+          $mail->Body    = $mailcon;
+          $mail->send();
+        } catch (Exception $e) {
+          echo 'Sorry, your message could not be sent.';
+          echo 'PHPMailer Error: ' . $mail->ErrorInfo;
+        }
       }
     endif;
   endif;
